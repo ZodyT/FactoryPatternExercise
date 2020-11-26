@@ -4,23 +4,20 @@ using System.Text;
 
 namespace FactoryPatternExercise
 {
-    class VehicleFactory
-    {
-        public void GetVehicle(int NumberOfTires)
+   public static class VehicleFactory
+   {
+        public static IVehicle GetVehicle(int NumberOfTires)
         {
             switch (NumberOfTires)
             {
                 case 2:
-                    Motorcycle1 MyMoto = new Motorcycle1();
-                    break;
+                    return new Motorcycle1();                                                   
                 case 4:
-                    Car MyCar = new Car();
-                    break;
+                    return new Car();
                 default:
                     Console.WriteLine("Your vehicle cannot be made, sorry!");
                     break;
             }
         }
-
-    }
+   }
 }

@@ -9,6 +9,8 @@ namespace FactoryPatternExercise
             Console.WriteLine("How many tires does your vehicle have?");
             int NumberOfTires = Convert.ToInt32(Console.ReadLine());
 
+            var myVehicle = VehicleFactory.GetVehicle(NumberOfTires);
+            myVehicle.Drive();
         }
     }
 }

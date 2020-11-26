@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FactoryPatternExercise
 {
-    public class Motorcycle1 : IVehicle 
+    public class Motorcycle1 : IVehicle
     {
         public void Drive()
         {
